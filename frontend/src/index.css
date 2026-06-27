@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  
+  /* Primary Accent: Dark Bluish Green */
+  --color-primary: #0A3631;
+  --color-primary-hover: #062421;
+  --color-primary-light: #E6F3F1;
+  --color-accent-teal: #14B8A6;
+  
+  /* Background, surface, text */
+  --color-surface: #F9FBFB;
+  --color-text-dark: #0D1F1D;
+}
+
+:root {
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --heading: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  font-family: var(--sans);
+  color-scheme: light;
+  color: #1A1A1A;
+  background-color: #FFFFFF;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFFFF;
+  color: #1A1A1A;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Global inputs, buttons and link animations */
+a, button, input, select, textarea {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus styles */
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 2px rgba(10, 54, 49, 0.15) !important;
+}
+
+/* Hero Graph Pattern */
+.hero-graph-pattern {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-primary);
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(20, 184, 166, 0.15), transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(10, 54, 49, 0.8), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 20px 20px, 20px 20px;
+  background-position: center;
+}
+
+/* Modern Card Hover Effects */
+.modern-card {
+  background: #ffffff;
+  border: 1px solid rgba(10, 54, 49, 0.08);
+  box-shadow: 0 2px 8px rgba(10, 54, 49, 0.02);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(20, 184, 166, 0.3);
+  box-shadow: 0 12px 30px rgba(10, 54, 49, 0.06);
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFCFB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4D3D1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
