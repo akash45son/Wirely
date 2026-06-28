@@ -85,11 +85,11 @@ const Footer = () => {
           <ul className="space-y-2.5">
             <li className="flex items-center gap-2 text-xs text-gray-500">
               <MapPin size={14} className="text-primary shrink-0" />
-              <span>Main Academic Block, Campus</span>
+              <span>AISSMS IOIT, Pune</span>
             </li>
             <li className="flex items-center gap-2 text-xs text-gray-500">
               <Mail size={14} className="text-primary shrink-0" />
-              <span>support@wirely-campus.edu</span>
+              <span>akash.sonawanedev@gmail.com</span>
             </li>
             <li className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-primary-light px-3 py-1 text-xs font-bold text-primary border border-primary/10">
               🌱 Eco-Friendly Initiative
@@ -102,7 +102,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-primary/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400 font-medium">
         <span>© {new Date().getFullYear()} wirely. All rights reserved.</span>
         <span className="flex items-center gap-1 bg-primary-light/35 border border-primary/5 px-2.5 py-1 rounded-[6px] text-primary">
-          Made with <Heart size={12} className="text-red-500 fill-red-500" /> on Campus for a Greener Tomorrow.
+          Made with <Heart size={12} className="text-red-500 fill-red-500" /> By AKASH for a Greener Tomorrow.
         </span>
       </div>
     </footer>
