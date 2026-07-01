@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { BrainCircuit } from "lucide-react";
+import { BrainCircuit, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   Leaf,
@@ -115,34 +115,52 @@ const DashboardPage = () => {
           {stats.topSustainableCategory}
         </p>
       </div>
-      <div className="mt-8 rounded-[16px] border border-primary/10 bg-gradient-to-r from-green-50 to-emerald-100 p-6 shadow-sm">
-  <div className="flex items-start justify-between">
-    <div>
-      <div className="flex items-center gap-2">
-        <BrainCircuit
-          className="text-green-700"
-          size={28}
-        />
 
-        <h2 className="text-2xl font-bold">
-          AI Project Builder
-        </h2>
+      
+      <div className="mt-8 rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:shadow-xl overflow-hidden">
+
+  {/* Top accent bar */}
+  <div className="h-1.5 w-full bg-green-800" />
+
+  <div className="p-8">
+    <div className="flex items-start justify-between gap-6">
+      <div className="flex-1">
+
+        {/* Header */}
+        <div className="flex items-center gap-3">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-green-50">
+            <BrainCircuit size={24} className="text-green-800" />
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-green-800">
+              Powered by AI
+            </p>
+            <h2 className="text-2xl font-bold text-gray-900">
+              AI Project Builder
+            </h2>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="my-5 h-px bg-gray-100" />
+
+        {/* Description */}
+        <p className="max-w-2xl text-sm leading-7 text-gray-500">
+          Describe the electronics project you want to build. AI will
+          generate the required components and instantly show which
+          ones are available on EcoTrade Campus.
+        </p>
+
+        {/* CTA */}
+        <Link
+          to="/ai-project-builder"
+          className="mt-6 inline-flex items-center gap-2 rounded-lg bg-green-900 px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-green-800 hover:gap-3"
+        >
+          Open AI Builder
+          <ArrowRight size={15} />
+        </Link>
+
       </div>
-
-      <p className="mt-3 text-gray-700 max-w-2xl">
-        Describe the electronics project you
-        want to build. AI will generate the
-        required components and instantly
-        show which ones are available on
-        EcoTrade Campus.
-      </p>
-
-      <Link
-        to="/ai-project-builder"
-        className="mt-6 inline-block rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700"
-      >
-        Open AI Builder
-      </Link>
     </div>
   </div>
 </div>

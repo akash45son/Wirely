@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import AIProjectForm from "../components/ai/AIProjectForm";
 import { generateProject } from "../services/aiService";
+import ProjectSummary from "../components/ai/ProjectSummary";
+import ComponentCard from "../components/ai/ComponentCard";
 
 const AIProjectBuilderPage = () => {
   const [projectData, setProjectData] =
@@ -52,14 +54,37 @@ const AIProjectBuilderPage = () => {
       )}
 
       {projectData && (
-        <pre className="mt-8 overflow-auto rounded-lg bg-gray-900 p-6 text-green-400">
-          {JSON.stringify(
-            projectData,
-            null,
-            2
-          )}
-        </pre>
+        <ProjectSummary
+  project={projectData}
+/>
       )}
+
+      {
+  projectData && (
+    <div className="mt-8">
+
+      <h2 className="mb-6 text-3xl font-bold">
+        Required Components
+      </h2>
+
+      <div className="grid gap-6 lg:grid-cols-2">
+
+        {projectData.components.map(
+          (component, index) => (
+
+            <ComponentCard
+              key={index}
+              component={component}
+            />
+
+          )
+        )}
+
+      </div>
+
+    </div>
+  )
+}
     </div>
   );
 };
