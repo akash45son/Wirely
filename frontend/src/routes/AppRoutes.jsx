@@ -16,7 +16,7 @@ import MyProductsPage from "../dashboard/MyProductsPage";
 import ProtectedRoute from "./ProtectedRoute";
 
 import EditProductPage from "../dashboard/EditProductPage";
-
+import AIProjectBuilderPage from "../pages/AIProjectBuilderPage";
 
 
 const AppRoutes = () => {
@@ -27,10 +27,7 @@ const AppRoutes = () => {
       <Route element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
 
-        <Route
-          path="/products/:id"
-          element={<ProductDetailsPage />}
-        />
+        
 
         {/* Protected Routes */}
 
@@ -60,6 +57,15 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         />
+
+        <Route
+  path="/ai-project-builder"
+  element={
+    <ProtectedRoute>
+      <AIProjectBuilderPage />
+    </ProtectedRoute>
+  }
+/>
 
           <Route
   path="/products/:id"

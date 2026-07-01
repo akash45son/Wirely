@@ -39,11 +39,13 @@ const healthRoutes = require("./routes/v1/healthRoutes");
 const userRoutes = require("./routes/v1/userRoutes");
 const categoryRoutes = require("./routes/v1/categoryRoutes");
 const productRoutes = require("./routes/v1/productRoutes");
+const aiRoutes = require("./routes/v1/aiRoutes");
 
 app.use("/api/v1/health", healthRoutes);
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/categories", categoryRoutes);
 app.use("/api/v1/products", productRoutes);
+app.use("/api/v1/ai", aiRoutes);
 
 const notFound = require("./middleware/notFoundMiddleware");
 const errorHandler = require("./middleware/errorMiddleware");

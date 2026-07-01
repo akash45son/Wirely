@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useQuery } from "@tanstack/react-query";
-
+import { BrainCircuit } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   Leaf,
   Trophy,
@@ -114,7 +115,39 @@ const DashboardPage = () => {
           {stats.topSustainableCategory}
         </p>
       </div>
+      <div className="mt-8 rounded-[16px] border border-primary/10 bg-gradient-to-r from-green-50 to-emerald-100 p-6 shadow-sm">
+  <div className="flex items-start justify-between">
+    <div>
+      <div className="flex items-center gap-2">
+        <BrainCircuit
+          className="text-green-700"
+          size={28}
+        />
+
+        <h2 className="text-2xl font-bold">
+          AI Project Builder
+        </h2>
+      </div>
+
+      <p className="mt-3 text-gray-700 max-w-2xl">
+        Describe the electronics project you
+        want to build. AI will generate the
+        required components and instantly
+        show which ones are available on
+        EcoTrade Campus.
+      </p>
+
+      <Link
+        to="/ai-project-builder"
+        className="mt-6 inline-block rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700"
+      >
+        Open AI Builder
+      </Link>
     </div>
+  </div>
+</div>
+    </div>
+    
   );
 };
 
